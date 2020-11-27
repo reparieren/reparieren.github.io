@@ -1,0 +1,30 @@
+<nav id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
+
+    <a href="/"><h3>Smartphone Reparatur Wiesbaden</h3></a>
+  
+    <div class="menu-icon" onclick="myFunction()">
+    <span></span>
+    </div>
+  
+    <ul id="ulliste">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <div class="dropdown">
+        <a class="dropbtn" href="/service">Service</a>
+  
+        <div class="dropdown-content">
+        </div>
+
+        <ul>
+          {% for item in site.service %}
+             <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+       </ul>
+  
+  
+      </div>
+      <a href="/kontakt">Kontakt</a>
+  
+    </ul>
+  
+  </nav>
